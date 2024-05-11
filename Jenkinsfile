@@ -8,7 +8,7 @@ pipeline {
                     docker.image('node:latest').pull()
 
                     // Run the Node.js Docker container
-                    docker.image('node:latest').run('-p 3000:3000 -v $PWD:/app -w /app node:latest npm start')
+                    docker.image('node:latest').run('-p 3000:3000 -v "%cd%":/Users/user/OneDrive/Documents/BITS/devops_2023mt93094/my-app -w /Users/user/OneDrive/Documents/BITS/devops_2023mt93094/my-app node:latest npm start')
                 }
             }
         }
